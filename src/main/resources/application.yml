@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: demo-security
+
+  jpa:
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/demo-security
+    username: postgres
+    password: postgres
+
+token:
+  signing:
+    key: 53A73E5F1C4E0A2D3B5F2D784E6A1B423D6F247D1F6E5C3A596D635A75327855
+  expiration:
+    refresh: 604800000
+    access: 900000
+
+springdoc:
+  swagger-ui:
+    path: /api/v1/swagger-ui.html
+  api-docs:
+    path: /api/v1/api-docs
